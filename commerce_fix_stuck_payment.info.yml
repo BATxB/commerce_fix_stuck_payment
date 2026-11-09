@@ -1,0 +1,9 @@
+name: 'Commerce Fix Stuck Payment'
+type: module
+description: 'Automatically deletes stuck payment methods when users go back to edit checkout info.'
+package: Commerce
+core_version_requirement: ^10 || ^11
+dependencies:
+  - commerce:commerce_payment
+  - commerce:commerce_checkout
+

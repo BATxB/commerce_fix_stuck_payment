@@ -1,0 +1,6 @@
+services:
+  commerce_fix_stuck_payment.route_subscriber:
+    class: Drupal\commerce_fix_stuck_payment\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+
