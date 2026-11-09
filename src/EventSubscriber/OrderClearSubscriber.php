@@ -36,7 +36,6 @@ class OrderClearSubscriber implements EventSubscriberInterface {
    * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
-    // Explicitly use the event string since the constant is deprecated or removed.
     return [
       'commerce_checkout.reopen' => 'onCheckoutReopen',
     ];
