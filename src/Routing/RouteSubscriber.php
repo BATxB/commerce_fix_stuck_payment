@@ -6,7 +6,7 @@ use Drupal\Core\Routing\RouteSubscriberBase;
 use Symfony\Component\Routing\RouteCollection;
 
 /**
- * Listens to the dynamic route events.
+ * Listening for commerce_checkout.form
  */
 class RouteSubscriber extends RouteSubscriberBase {
 
@@ -15,7 +15,6 @@ class RouteSubscriber extends RouteSubscriberBase {
    */
   protected function alterRoutes(RouteCollection $collection) {
     if ($route = $collection->get('commerce_checkout.form')) {
-      // REMOVE the leading backslash here:
       $route->setDefault('_controller', 'Drupal\commerce_fix_stuck_payment\Controller\CheckoutFixController::checkAndClear');
     }
   }
